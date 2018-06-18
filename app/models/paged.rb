@@ -1,0 +1,2 @@
+class Paged < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class Producted < ApplicationRecord
+end
