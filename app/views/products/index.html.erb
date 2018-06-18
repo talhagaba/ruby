@@ -1,0 +1,32 @@
+
+<div class="products index">
+  <h2>Admin Panel</h2>
+
+  <h2>Products</h2>
+ <%= link_to("Add new Product",'new',:class => 'action new',class: "pull-left")%>
+<br><br>
+
+  <table class="listing" summary="product list">
+    <tr class="header">
+      <th>#</th>
+      <th>Product</th>
+      <th>Visible</th>
+      <th>Pages</th>
+      <th>Acton</th>
+    </tr>
+    <% @products.each do |product|%>
+    <tr>
+      <td><%= product.position %></td>
+      <td><%= product.productName %></td>
+      <td class="center"><%= product.visible ? 'Yes':'No'%></td>
+      <td class="center"><%= %></td>
+      <td class = "action">
+      	       <%=link_to("Show",product_path(product.id),:class=>'acton show')%>
+        <%=link_to("Edit",edit_product_path(product.id),:class=>'acton edit')%>
+        <%=link_to("Delete",delete_product_path(product.id),:class=>'acton delete')%>
+      
+      </td>
+    </tr>
+    <%end%>
+  </table>
+</div>

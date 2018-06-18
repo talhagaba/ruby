@@ -1,0 +1,33 @@
+
+
+
+
+<%= link_to("BACK TO LIST", products_path, :class => 'back-link')%>
+<div class="products show">
+  <h1>Admin Panel</h1>
+<br>
+
+  <h2>Show Product</h2>
+  <table summary="Product detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @product.productName %></td>
+    </tr>
+    <tr>
+      <th>Position</th>
+      <td><%= @product.position %></td>
+    </tr>
+    <tr>
+      <th>Visible</th>
+      <td><%= @product.visible ? 'true' : 'false' %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @product.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @product.updated_at %></td>
+    </tr>
+  </table>
+</div>
