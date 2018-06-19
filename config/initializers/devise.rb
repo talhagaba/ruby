@@ -9,7 +9,8 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = 'f4c082da32c913f66a68eec5ce156efb706d66d681f41be5fc72098a35c026a924ed9c683b90b182662075562a7a5d729bfe50b2c7e11363e8b557faef56b9ea'
-  
+           config.secret_key = '5c443f7c110dccf37df6d994c8ec4c36528808d2f85d10b6d517554d39b3a171380a175572edb5696696c766b31da53edf1fd419d176126cd6e61ea1899d318b'
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -33,7 +34,7 @@ Devise.setup do |config|
   # available as additional gems.
   require 'devise/orm/active_record'
 
-         config.authentication_keys = [ :login ]
+      #   config.authentication_keys = [ :login ]
               config.sign_out_via = :get
 
 
