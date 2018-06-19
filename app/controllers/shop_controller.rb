@@ -1,6 +1,8 @@
 class ShopController < ApplicationController
+
+ before_action :authenticate_user!
+
 layout 'header'
-# before_action :authenticate_user!
 
   def index
             @products =Product.sorted
