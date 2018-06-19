@@ -16,6 +16,7 @@
     <link href="assets/animate.css" rel="stylesheet">
 	<link href="assets/main.css" rel="stylesheet">
 	<link href="assets/responsive.css" rel="stylesheet">
+
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -91,13 +92,14 @@
 							<ul class="nav navbar-nav">
 								<li><%= link_to"Checkout",shop_checkout_path %></li>
 								<li><%= link_to"Cart",shop_cart_path %></li>
-								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-								<li><%= link_to"SignUp",new_user_registration_path %></li>
 <% if user_signed_in? %>
   <li>
-  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+    
   </li>
 <% else %>
+								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+								<li><%= link_to"SignUp",new_user_registration_path %></li>
   <li>
   <%= link_to('Login', new_user_session_path)  %>  
   </li>

@@ -6,6 +6,18 @@ class ApplicationController < ActionController::Base
 #def user_params
  # params.require(:user).permit(:name, :email, :password, :password_confirmation)
 #end
+protected
 
+  def after_sign_up_path_for(@user)
+    '/users/login' # Or :prefix_to_your_route
+  end
+
+
+private
+
+  # Overwriting the sign_out redirect path method
+  def after_sign_out_path_for(@user)
+    '/users/login'
+  end
 
 end
