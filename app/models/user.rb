@@ -7,7 +7,9 @@ class User < ApplicationRecord
 
 
 
-
+def user_params
+  params.require(:user).permit(:name, :email, :password, :password_confirmation)
+end
          has_many :products
 
 
